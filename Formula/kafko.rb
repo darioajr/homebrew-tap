@@ -5,21 +5,21 @@
 class Kafko < Formula
   desc "Modern Kafka CLI — speak Kafka from your terminal"
   homepage "https://github.com/darioajr/kafko"
-  version "0.4.0"
+  version "0.4.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/darioajr/kafko/releases/download/v0.4.0/kafko_0.4.0_darwin_amd64.tar.gz"
-      sha256 "158e2c615cb456ac0535836ae44e8032cef9e79854e01d45911ced42c4ab22dd"
+      url "https://github.com/darioajr/kafko/releases/download/v0.4.1/kafko_0.4.1_darwin_amd64.tar.gz"
+      sha256 "c31157d3b43ccbd604ab5eadd6f8becb0fd975805ef120ca7467c634d534d131"
 
       define_method(:install) do
         bin.install "kafko"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/darioajr/kafko/releases/download/v0.4.0/kafko_0.4.0_darwin_arm64.tar.gz"
-      sha256 "1024129c7e8917c33a9995a7fe501a8760075d632013f9f487cd0ae601dd9dfe"
+      url "https://github.com/darioajr/kafko/releases/download/v0.4.1/kafko_0.4.1_darwin_arm64.tar.gz"
+      sha256 "e520fbce7f70f9c827aae8bffe6db97a13a8130fc71f8acf25da37662af90b3f"
 
       define_method(:install) do
         bin.install "kafko"
@@ -29,15 +29,15 @@ class Kafko < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/darioajr/kafko/releases/download/v0.4.0/kafko_0.4.0_linux_amd64.tar.gz"
-      sha256 "73b40e60c63a29d4bdabe2d99b6c90c473cd8b112851afc6d053b02609ad28da"
+      url "https://github.com/darioajr/kafko/releases/download/v0.4.1/kafko_0.4.1_linux_amd64.tar.gz"
+      sha256 "31719c57d2bb1ec6ef0b6e2271410dba90d65376458251b1cd42a5fcd1f3e520"
       define_method(:install) do
         bin.install "kafko"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/darioajr/kafko/releases/download/v0.4.0/kafko_0.4.0_linux_arm64.tar.gz"
-      sha256 "70b04b75a4213cf9ab467542f01a17782aede825d90317e2788a675b92e1b9dd"
+      url "https://github.com/darioajr/kafko/releases/download/v0.4.1/kafko_0.4.1_linux_arm64.tar.gz"
+      sha256 "9b1bfc0263d0aebacee812a7249d3ea43985fa803a2ef67b554aef3914f14438"
       define_method(:install) do
         bin.install "kafko"
       end
